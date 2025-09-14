@@ -1,23 +1,28 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
+
+// 定义枚举
+const (
+	BEIJING = iota
+	SHANGHAI
+	SHENZHEN
 )
 
-// 一、变量学习
-func main() {
-	var a = 10
-	var c = "hello world"
-	d := 100
-	var e, f = 10, 12
-	var (
-		x int    = 10
-		y string = "hello"
-	)
-	fmt.Printf("type of a = %T\n", a)
-	fmt.Printf("type of c = %T\n", c)
+const (
+	a, b = iota + 1, iota + 2
+	c, d
+	e, f
+)
 
-	fmt.Printf("type of d = %T\n", d)
-	fmt.Printf("type of e = %T, type of f = %T\n", e, f)
-	fmt.Printf("type of x = %T, type of y = %T\n", x, y)
+// 二、常量
+func main() {
+	const len = 10
+	fmt.Printf("type of len: %T\n", len)
+
+	fmt.Printf("address: %d\n", SHANGHAI)
+
+	fmt.Println(a, b)
+	fmt.Println(c, d)
+	fmt.Println(e, f)
 }
